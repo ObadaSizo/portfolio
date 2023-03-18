@@ -429,6 +429,7 @@ nav:hover a {
     }
 }
 .projects .text .project-card {
+    opacity: 0%;
     position: absolute;
     bottom: -350px ;
     display: flex;
@@ -453,6 +454,7 @@ nav:hover a {
 }
 .projects .text #s1 {
     bottom: 40px;
+    opacity: 100%;
 }
 @keyframes slide-down {
     0% {
