@@ -32,6 +32,26 @@ a {
     padding-left: 400px;
     padding-right: 200px;
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+  /* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 1px 1px 10px var(--dark-color); 
+    border-radius: 5px;
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--blue-color); 
+    border-radius: 5px;
+}
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0085c3;
+}
 /* start nav */
 nav {
     z-index: 9;
@@ -41,6 +61,9 @@ nav {
     position:fixed;
     background-color:var(--blue-color);
     transition-duration: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 nav:hover {
     width: 180px;
@@ -76,7 +99,6 @@ nav ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 20vh;
     margin-left: 20px;
 }
 nav ul li {
@@ -120,7 +142,10 @@ nav:hover a {
     display: block;
 }
 .arrow {
-    padding-top: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    
 }
 .arrow {
     color: var(--dark-color);
@@ -309,6 +334,166 @@ nav:hover a {
     width: 50px;
 }
 /* end skills */
+
+/* start projects */
+.projects .container .show {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+.projects .container .show .icons a {
+    display: flex;
+    flex-direction: column;
+
+}
+.projects .container i{
+    cursor: pointer;
+    background-color: white;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    margin: 10px auto;
+    transition-duration: 0.2s;
+}
+.projects .container i:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.39);
+}
+.projects .container .text{
+    position: relative;
+    height: 400px;
+    width: 80%;
+    overflow: hidden;
+}
+.projects .text .project-card {
+    position: absolute;
+    bottom: -350px ;
+    display: flex;
+    width: 950px;
+    gap: 50px;
+    margin: 0px;
+    padding: 30px;
+    background-color: #fafafa;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.267);
+    border-radius: 20px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.projects .text #s1 {
+    bottom: 40px;
+}
+@keyframes slide-down {
+    0% {
+        bottom: 40px;
+        opacity: 100%;
+    }
+    20% {
+        bottom: 10px;
+        opacity: 90%;
+    }
+    50% {
+        opacity: 60%;
+    }
+    100% {
+        bottom: 350px;
+        opacity: 0%;
+    }
+}
+@keyframes slide-up {
+    0% {
+        bottom: 40px;
+        opacity: 100%;
+    }
+    20% {
+        bottom: 70px;
+        opacity: 90%;
+    }
+    50% {
+        opacity: 60%;
+    }
+    100% {
+        bottom: -350px;
+        opacity: 0%;
+    }
+}
+@keyframes scroll-up {
+    0% {
+        bottom: -350px;
+        opacity: 0%;
+    }
+    100% {
+        bottom: 40px;
+        opacity: 100%;
+    }
+}
+@keyframes scroll-down {
+    0% {
+        bottom: 350px;
+        opacity: 0%;
+    }
+    100% {
+        bottom: 40px;
+        opacity: 100%;
+    }
+}
+.projects .text .project-card h5{
+    font-size: 35px;
+    font-weight: 300;
+    padding: 10px 0 20px 0;
+}
+.projects .text .project-card img {
+    max-width: 500px;
+    box-shadow: 1px 1px 10px #1786e0b0;
+}
+.projects .show .dots {
+    width: 30px;
+    height: 100px;
+}
+.projects .show .dots span {
+    display: block;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.336);
+    overflow: hidden;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.projects .show .dots #d1 {
+    background-color: var(--main-color-alt);
+} 
+@keyframes dot-out {
+    0% {
+        background-color: var(--main-color-alt) ;
+    }
+    50% {
+        background-color: rgb(122, 175, 255) ;
+        transform: scale(1.1);
+    }
+    100% {
+        background-color: white;
+        transform: scale(1);
+    }
+}
+@keyframes dot-in {
+    0% {
+        background-color: white;
+        transform: scale(1);
+    }
+    50% {
+        background-color: rgb(122, 175, 255) ;
+        transform: scale(1.1);
+    }
+    100% {
+        background-color: var(--main-color-alt) ;
+    }
+}
+/* end projects */
 
 /* start contact */
 .contact .text .cont-a {
