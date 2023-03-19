@@ -10,25 +10,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
 <body>
-    <nav>
+    <nav id="nav1">
         <div class="logo">
             <h1>OR</h1>
         </div>
         <div class="list">
             <ul>
-                <li><i class="fa-solid fa-house"></i><a href="#home">Home</a></li>
-                <li><i class="fa-solid fa-user"></i><a href="#about">About</a></li>
-                <li><i class="fa-solid fa-display"></i><a href="#skills">Skills</a></li>
-                <li><i class="fa-solid fa-suitcase"></i><a href="#works">Works</a></li>
-                <li><i class="fa-solid fa-address-card"></i><a href="#contact">Contact</a></li>
+                <li id="li1"><i class="fa-solid fa-house"></i><a href="#section1">Home</a></li>
+                <li id="li2"><i class="fa-solid fa-user"></i><a href="#section2">About</a></li>
+                <li id="li3"><i class="fa-solid fa-display"></i><a href="#section3">Skills</a></li>
+                <li id="li4"><i class="fa-solid fa-suitcase"></i><a href="#section4">Works</a></li>
+                <li id="li5"><i class="fa-solid fa-address-card"></i><a href="#section5">Contact</a></li>
             </ul>
         </div>
         <div class="arrow">
-            <p>Scroll Down</p>
-            <i class="fa-solid fa-angles-down"></i>
+            <p><a href="#section5">Scroll Down</a></p>
+            <a href="#section5"><i class="fa-solid fa-angles-down"></i></a>
         </div>
     </nav>
-    <div class="intro" id="home">
+    <div class="intro" id="section1">
         <div class="container">
             <div class="img">
                 <img src="./imgs/profile.png" alt="">
@@ -48,7 +48,7 @@
             </div>
         </div>
     </div>
-    <div class="about" id="about">
+    <div class="about" id="section2">
         <div class="container">
             <div class="heading">
                 <p class="heading-p">some info</p>
@@ -62,7 +62,7 @@
             </div>
         </div>
     </div>
-    <div class="skills about" id="skills">
+    <div class="skills about" id="section3">
         <div class="container">
             <div class="heading">
                 <p class="heading-p">check out my</p>
@@ -90,10 +90,6 @@
                     <p>git</p>
                 </div>
                 <div class="lang">
-                    <img src="./imgs/vscode.svg" alt="">
-                    <p>VS Code</p>
-                </div>
-                <div class="lang">
                     <img src="./imgs/javascript.svg" alt="">
                     <p>JavaScript</p>
                 </div>
@@ -105,10 +101,14 @@
                     <img src="./imgs/react.svg" alt="">
                     <p>React.js</p>
                 </div>
+                <div class="lang">
+                    <img src="./imgs/photoshop.svg.png" alt="">
+                    <p>PhotoShop</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="projects about" id="works">
+    <div class="projects about" id="section4">
         <div class="container">
             <div class="heading">
                 <p class="heading-p">Take a look at my</p>
@@ -125,7 +125,7 @@
                 <div class="text">
                     <div class="project-card" id="s1">
                         <div class="imag">
-                            <img src="./imgs/template1.png" alt="">
+                            <img src="./imgs/template1.jpg" alt="">
                         </div>
                     <div class="pro-text">
                         <h5>Leon Tamplete</h5>
@@ -140,7 +140,7 @@
                 </div>
                 <div class="project-card" id="s2">
                     <div class="imag">
-                        <img src="./imgs/tamplate2.png" alt="">
+                        <img src="./imgs/tamplate2.jpg" alt="">
                     </div>
                     <div class="pro-text">
                         <h5>Kasper Tamplete</h5>
@@ -155,7 +155,7 @@
                 </div>
                 <div class="project-card" id="s3">
                     <div class="imag">
-                        <img src="./imgs/tamplete4.png" alt="">
+                        <img src="./imgs/tamplete4.jpg" alt="">
                     </div>
                     <div class="pro-text">
                         <h5>BR Architects Tamplete</h5>
@@ -169,7 +169,7 @@
                 </div>
                 <div class="project-card" id="s4">
                     <div class="imag">
-                        <img src="./imgs/tamplete3.png" alt="">
+                        <img src="./imgs/tamplete3.jpg" alt="">
                     </div>
                     <div class="pro-text">
                         <h5>Bondi Tamplete</h5>
@@ -182,17 +182,33 @@
                         </div>
                     </div>
                 </div>
+                <div class="project-card" id="s5">
+                    <div class="imag">
+                        <img src="./imgs/tamplete5.jpg" alt="">
+                    </div>
+                    <div class="pro-text">
+                        <h5>A&U Tamplete</h5>
+                        <p class="lang-used">Languages Used : <span class="colored">HTML , CSS , JavaScript</span></p>
+                        <p class="pro-flash">Only on large monitors</p>
+                        <p class="pro-flash">(NOT RESPONSIVE)</p>
+                        <div class="visit">
+                            <a href="https://github.com/ObadaSizo/website-like-mtn" target="_blank">Repo...</a>
+                            <a href="https://obadasizo.github.io/website-like-mtn/" target="_blank ">Live...</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="dots">
-                <span class="active" id="d1"></span>
-                <span id="d2"></span>
-                <span id="d3"></span>
-                <span id="d4"></span>
+                <span class="active dot" id="d1"></span>
+                <span id="d2" class="dot"></span>
+                <span id="d3" class="dot"></span>
+                <span id="d4" class="dot"></span>
+                <span id="d5" class="dot"></span>
             </div>
             </div>
         </div>
     </div>
-    <div class="contact about" id="about">
+    <div class="contact about" id="section5">
         <div class="container">
             <div class="heading">
                 <p class="heading-p">sey hello</p>
@@ -216,7 +232,7 @@
             </div>
         </div>
     </div>
-    <footer>
+    <footer id="footer">
         <div class="container">
             <p class="copyright ">&copy; <span class="colored">OBADA RUDAINY</span> 2023</p>
         </div>
