@@ -48,7 +48,12 @@ a {
 /* Large */
 @media (min-width: 1200px) {
     .container {
-        width: 1170px;
+        min-width: 900px;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        min-width: 1200px;
     }
 }
 ::-webkit-scrollbar {
@@ -187,7 +192,7 @@ nav:hover a {
         z-index: 9;
         background-color: transparent;
         height: 0%;
-        padding: 47px 65px 47px 10px;
+        padding: 120px 200px 120px 10px;
         top:30%;
         left: 60px;
         transform: translateY(-50%) scale(1.1);
@@ -254,8 +259,8 @@ nav:hover a {
     nav ul li {
         margin: 0;
         position: absolute;
-        top: 0;
-        right: -30px;
+        top: -20px;
+        right: 0px;
         opacity: 0%;
         transition-duration: 0.7s;
         background-color: white;
@@ -339,7 +344,7 @@ nav:hover a {
     width: 320px;
     border-radius: 50%;
     margin-left: 50px;
-    box-shadow: 12px 0px 0px #1786e08c ,25px 0px 0px #1786e05d ,35px 0px 0px #1786e023;
+    box-shadow: 12px 0px 1px #1786e08c ,25px 0px 2px #1786e05d ,35px 0px 3px #1786e023;
     transform: rotate(-8deg);
 }
 .intro .container .text {
@@ -528,7 +533,7 @@ nav:hover a {
 .projects .text .project-card {
     opacity: 0%;
     position: absolute;
-    bottom: -350px ;
+    bottom: -400px ;
     display: flex;
     justify-content: center;
     width: 90%;
