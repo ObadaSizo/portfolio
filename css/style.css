@@ -574,7 +574,7 @@ nav:hover a {
         opacity: 60%;
     }
     100% {
-        bottom: 350px;
+        bottom: 400px;
         opacity: 0%;
     }
 }
@@ -591,13 +591,13 @@ nav:hover a {
         opacity: 60%;
     }
     100% {
-        bottom: -350px;
+        bottom: -400px;
         opacity: 0%;
     }
 }
 @keyframes scroll-up {
     0% {
-        bottom: -350px;
+        bottom: -400px;
         opacity: 0%;
     }
     100% {
@@ -607,7 +607,7 @@ nav:hover a {
 }
 @keyframes scroll-down {
     0% {
-        bottom: 350px;
+        bottom: 400px;
         opacity: 0%;
     }
     100% {
