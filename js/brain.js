@@ -40,8 +40,6 @@ document.getElementById("up").onclick = () => {
 
 let dots = document.querySelectorAll(".dot");
 let slides = document.querySelectorAll(".project-card");
-console.log(dots);
-console.log(slides);
 for (let i=0;i<=dots.length-1;i++) {
     let dot = dots[i];
     dot.onclick =() => {
@@ -66,3 +64,37 @@ for (let i=0;i<=dots.length-1;i++) {
         }
     }
 }
+
+let sectionsBlur = document.querySelectorAll(".about");
+let introBlur = document.querySelector(".intro");
+let nav = document.querySelector("nav");
+let navlist = document.querySelector(".list") ;
+let h1 = document.querySelector("h1");
+let arrow = document.querySelector(".arrow"); 
+nav.onmouseover = () => {
+    for(let u=0 ; u<sectionsBlur.length;u++){
+        sectionsBlur[u].style.filter ="blur(10px)";
+    }
+    introBlur.style.filter="blur(10px)";
+    nav.setAttribute("class","nav_hover");
+    nav.style.animationName="none";
+    h1.setAttribute("class","h1_hover");
+}
+nav.onmouseleave = () => {
+    for(let u=0 ; u<sectionsBlur.length;u++){
+        sectionsBlur[u].style.filter ="blur(0px)";
+    }
+    introBlur.style.filter="blur(0px)";
+    nav.style.animationName="nav-move";
+    nav.removeAttribute("class");
+    h1.removeAttribute("class");
+}
+navlist.onclick = () => {
+    for(let u=0 ; u<sectionsBlur.length;u++){
+        sectionsBlur[u].style.filter ="blur(0px)";
+    }
+    introBlur.style.filter="blur(0px)";
+    nav.style.animationName="nav-move";
+    nav.removeAttribute("class");
+}
+

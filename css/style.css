@@ -90,6 +90,9 @@ nav {
     flex-direction: column;
     justify-content: space-between;
 }
+nav .label {
+    display: none;
+}
 nav:hover {
     width: 180px;
 }
@@ -192,28 +195,71 @@ nav:hover a {
         z-index: 9;
         background-color: transparent;
         height: 0%;
-        padding: 120px 200px 120px 10px;
-        top:30%;
+        padding: 120px 200px 120px 20px;
+        top:40%;
         left: 60px;
-        transform: translateY(-50%) scale(1.1);
+        transform: translateY(-50%) scale(1);
         text-align: center;
         position:fixed;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        animation-name: nav-move;
+        animation-delay: 3s;
+        animation-duration: 2s;
+        animation-iteration-count: 3;
+        animation-fill-mode:backwards;
+        animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    @keyframes nav-move {
+        0% {
+            transform: scale(1) translateY(-50%);
+        }
+        25% {
+            transform: scale(1.1) rotate(-5deg) translateY(-50%);
+        }
+        50% {
+            transform: scale(1.15) rotate(5deg) translateY(-50%);
+        }
+        100% {
+            transform: scale(1) translateY(-50%);
+        }
+    }
+    .nav_hover:hover {
+        padding: 120px 200px 120px 50px;
+    }
+    nav .label {
+        width: 100px;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        bottom: 50px;
+        color: var(--blue-color);
+        background-color: white;
+        border-radius:20px ;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    nav .label i {
+        font-size: 20px;
+    }
+    .nav_hover:hover .label {
+        display: none;
     }
     nav h1 {
+        cursor: pointer;
         position: relative;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center;    
         color: white;
         height: 120px;
         padding: 30px;
         margin: 10px;
         font-size: 50px;
-        z-index: 1;
+        z-index: 4;
         transition-duration: 0.6s;
         transition-timing-function:cubic-bezier(0.8, 0, 0, 0.5);
         background-color: transparent;
@@ -237,14 +283,14 @@ nav:hover a {
         z-index: -1;
         border-radius: 10px;
     }
-    nav h1:hover{
+    nav .h1_hover:hover{
         transform: scale(1.4);
     }
-    nav h1:hover::before{
+    nav .h1_hover:hover::before{
         transform: rotate(90deg);
         transition-duration: 0.7s;
     }
-    nav h1:hover::after{
+    nav .h1_hover:hover::after{
         transform: rotate(-45deg);
         transition-duration: 0.7s;
     }
@@ -274,31 +320,31 @@ nav:hover a {
     nav ul li i {
         color: var(--blue-color);
     }
-    nav:hover ul li {
+    .nav_hover:hover ul li {
         transform: scale(1.2);
         opacity: 100%;
     }
-    nav:hover ul #li1 {
+    .nav_hover:hover ul #li1 {
         position: absolute;
         top: -135px;
         right: -50px;
     }
-    nav:hover ul #li2 {
+    .nav_hover:hover ul #li2 {
         position: absolute;
         top: -75px;
         right: -110px;
     }
-    nav:hover ul #li3 {
+    .nav_hover:hover ul #li3 {
         position: absolute;
         top: -15px;
         right: -140px;
     }
-    nav:hover ul #li4 {
+    .nav_hover:hover ul #li4 {
         position: absolute;
         top: 50px;
         right: -110px;
     }
-    nav:hover ul #li5 {
+    .nav_hover:hover ul #li5 {
         position: absolute;
         top: 110px;
         right: -50px;
@@ -324,21 +370,40 @@ nav:hover a {
 /* end nav */
 
 .colored {
-    color: var(--blue-color);
+    color: var(--main-color-alt);
     padding: 0 20px 0 0;
 }
 
 /* start intro */
 .intro {
+    background-position: 0 -800px;
+    background-image:url(../imgs/back.png);
+    background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+@media (max-width:1200px){
+    .intro {
+        background-position: 0 -550px;
+        background-image:url(../imgs/back.png);
+        background-size: cover;
+        height: 100vh;
+    }
+}
 .intro .container {
     display: flex;
     align-content: center;
     justify-content: flex-end;
+}
+@media (max-width:1200px){
+    .intro .container {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap:20px;
+    }
 }
 .intro img {
     width: 320px;
@@ -347,9 +412,21 @@ nav:hover a {
     box-shadow: 12px 0px 1px #1786e08c ,25px 0px 2px #1786e05d ,35px 0px 3px #1786e023;
     transform: rotate(-8deg);
 }
+@media (max-width:1200px){
+    .intro img {
+        margin: 0;
+        width: 380px;
+    }
+}
 .intro .container .text {
     max-width: 40%;
     margin:0 80px ;
+}
+@media (max-width:1200px){
+    .intro .container .text {
+        margin: 0;
+        max-width: 60%;
+    }
 }
 .intro .container .text {
     padding-top: 20px;
@@ -380,6 +457,11 @@ nav:hover a {
     align-items: center;
     justify-content: space-around;
     padding-top: 15px;
+}
+@media (max-width:1200px){
+    .intro .container .social {
+        padding-top: 40px;
+    }
 }
 .intro .container .social .resume {
     padding: 15px 30px;
@@ -435,7 +517,7 @@ nav:hover a {
     font-weight: 400;
 }
 .about {
-    padding-bottom: 300px;
+    padding-bottom: 200px;
     padding-left:80px ;
     display: flex;
     justify-content: center;
