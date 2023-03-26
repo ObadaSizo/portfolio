@@ -70,7 +70,6 @@ let introBlur = document.querySelector(".intro");
 let nav = document.querySelector("nav");
 let navlist = document.querySelector(".list") ;
 let h1 = document.querySelector("h1");
-let arrow = document.querySelector(".arrow"); 
 nav.onmouseover = () => {
     for(let u=0 ; u<sectionsBlur.length;u++){
         sectionsBlur[u].style.filter ="blur(10px)";
@@ -98,3 +97,38 @@ navlist.onclick = () => {
     nav.removeAttribute("class");
 }
 
+
+
+let arrowIcon = document.querySelector(".arrow a i");
+let arrowA1 = document.querySelector(".arrow a");
+let arrowPara =document.querySelector(".arrow p");
+let contact = document.querySelector(".list #li5");
+arrowA1.onclick = () => {
+    if(window.location.hash === "#section1" || window.location.hash === "#section2" || window.location.hash === "#section3" || window.location.hash === "#section4" || window.location.hash === ""){
+        setTimeout(function() {
+            arrowIcon.setAttribute("class","fa-solid fa-angles-up");
+            arrowPara.innerHTML.replace("Scroll Up");
+            arrowA1.setAttribute("href","#section1");
+        },550)  
+    }
+    else if (window.location.hash === "#section5") {
+        setTimeout(function() {
+            arrowIcon.setAttribute("class","fa-solid fa-angles-down");
+            arrowPara.innerHTML.replace("Scroll down");
+            arrowA1.setAttribute("href","#section5");
+        },550)
+    }
+}
+setInterval(function() {
+    if(window.pageYOffset >= 2600) {
+        arrowIcon.setAttribute("class","fa-solid fa-angles-up");
+            arrowPara.innerHTML.replace("Scroll Up");
+            arrowA1.setAttribute("href","#section1");
+            arrowPara.innerHTML="Scroll Up";
+    }else {
+        arrowIcon.setAttribute("class","fa-solid fa-angles-down");
+            arrowPara.innerHTML.replace("Scroll down");
+            arrowA1.setAttribute("href","#section5");
+            arrowPara.innerHTML="Scroll Down";
+    }
+},200)
