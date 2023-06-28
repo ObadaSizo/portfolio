@@ -2,7 +2,7 @@ let count = 1;
 let slide = document.getElementById("slide");
 
 document.getElementById("down").onclick = () => {
-    if(count < 5){
+    if(count < 6){
         let sub= document.getElementById(`s${count}`);
         sub.style.animationName="slide-down";
         document.getElementById(`d${count}`).style.animationName="dot-out";
@@ -10,11 +10,11 @@ document.getElementById("down").onclick = () => {
         document.getElementById(`d${count+1}`).style.animationName="dot-in";
         count++;
     } else{count++;}
-    if(count == 6) {
+    if(count == 7) {
         count = 1;
-        let sub= document.getElementById(`s${5}`);
+        let sub= document.getElementById(`s${6}`);
         sub.style.animationName="slide-down";
-        document.getElementById(`d${5}`).style.animationName="dot-out";
+        document.getElementById(`d${6}`).style.animationName="dot-out";
         document.getElementById(`s${1}`).style.animationName="scroll-up";
         document.getElementById(`d${1}`).style.animationName="dot-in";
     }
@@ -33,8 +33,8 @@ document.getElementById("up").onclick = () => {
         let sub= document.getElementById(`s${1}`);
         sub.style.animationName="slide-up";
         document.getElementById(`d${1}`).style.animationName="dot-out";
-        document.getElementById(`s${5}`).style.animationName="scroll-down";
-        document.getElementById(`d${5}`).style.animationName="dot-in";
+        document.getElementById(`s${6}`).style.animationName="scroll-down";
+        document.getElementById(`d${6}`).style.animationName="dot-in";
     }
 };
 

@@ -732,6 +732,7 @@ nav:hover a {
 }
 .projects .text .project-card .pro-text {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     flex-direction: column;
 }
@@ -742,9 +743,10 @@ nav:hover a {
     }
 }
 .projects .text .project-card h5{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 300;
     padding: 10px 0 20px 0;
+    margin: 0;
 }
 @media (max-width:1200px) {
     .projects .text .project-card h5{
@@ -754,7 +756,7 @@ nav:hover a {
     }
 }
 .projects .text .project-card img {
-    max-width: 500px;
+    max-width: 450px;
     box-shadow: 1px 1px 8px #f3faff;
 }
 @media (max-width:1200px) {
@@ -776,7 +778,8 @@ nav:hover a {
     }
 }
 .projects .text .project-card .pro-flash{
-    font-size: 18px;
+    text-align: center;
+    font-size: 15px;
     padding-bottom: 10px;
 }
 .project-card .visit {
